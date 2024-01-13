@@ -68,3 +68,37 @@ export const deleteBlog = async(req,res)=>{
     })
 }
 
+export const getAllBlogs = async(req,res)=>{
+
+    const blogs = await Blog.find(); 
+
+    if(!blogs) return res.status(404).json({
+        success:false,
+        message:"No Blog Exists"
+    })
+
+    res.json({
+        success:true,
+        message:"All Blogs ",
+        blogs
+    })
+}
+
+export const getBlogById = async(req,res)=>{
+    const id= req.params.id;
+
+    const blog = await Blog.findById(id) 
+
+    if(!blog) return res.status(404).json({
+        success:false,
+        message:"Invalid ID"
+    })
+
+
+    res.json({
+        success:true,
+        message:"Requested Blog",
+        blog
+    })
+}
+
