@@ -1,0 +1,26 @@
+.navbar{
+    background-color: aliceblue;
+    padding: 10px;
+}
+.items{
+    text-decoration: none;
+    color: #d87272;
+    padding: 5px;
+}
+.items:hover{
+    color: #e72626;
+    transition: all 0.7s;
+}
+.left{
+    text-decoration: none;
+    color: cadetblue;
+}
+.left:hover{
+    color: rgb(85, 218, 222);
+    transition: all 0.7s;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
